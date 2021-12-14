@@ -2,7 +2,7 @@ name: Set up Node/npm/yarn
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
