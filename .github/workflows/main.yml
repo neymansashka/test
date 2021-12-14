@@ -13,7 +13,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: '@neymansashka'
           always-auth: true
-      - run: npm install
       - run: npm run-script pub
+      - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
