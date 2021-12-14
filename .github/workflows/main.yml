@@ -12,9 +12,12 @@ jobs:
         with:
           registry-url: https://npm.pkg.github.com
           scope: '@neymansashka'
-      - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+         npm install
+         npm publish
+      #- run: echo 
+      #- run: npm publish
+        #env:
+          #NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
