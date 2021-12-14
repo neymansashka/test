@@ -3,6 +3,9 @@
   "version": "0.1.24",
   "description": "eslint config",
   "main": "index.js",  
+  "scripts":{
+    "pub":"npm publish"
+  },
   "publishConfig": {
       "registry":"https://npm.pkg.github.com"
   },
