@@ -1,18 +1,18 @@
 {
   "name": "@neymansashka/test",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "description": "eslint config",
-  "main": "index.js",  
-  "scripts":{
+  "main": "index.js",
+  "scripts": {
     "build": "tsc && vite build",
-    "publishing":"pnpm run build && pnpm publish --no-git-checks"
+    "publishing": "pnpm run build && pnpm publish --no-git-checks"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^4.5.2"
   },
   "publishConfig": {
-      "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
