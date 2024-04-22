@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/neymansashka/test#readme",
   "engines": {
-    "node": ">=18",
+    "node": "=18",
     "pnpm": ">=7"
   },
   "packageManager": "pnpm@7.32.1",
