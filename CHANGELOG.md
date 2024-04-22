@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.26](https://github.com/neymansashka/test/compare/v0.1.25...v0.1.26) (2024-04-22)
+
+
+### Bug Fixes
+
+* version ([cd3deda](https://github.com/neymansashka/test/commit/cd3deda17aca0bc36a793c63834916041c4fc2c7))
+
 ## 0.1.25 (2024-04-22)
 
 
