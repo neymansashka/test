@@ -1,6 +1,6 @@
 # Installing
 1234
-1122
+11122
 create [.npmrc](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc) file in the **root project folder**:
 
 ```
