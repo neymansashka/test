@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   release:
     types: [published]
-        
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   release:
     name: Publish and deploy
@@ -25,6 +27,10 @@ jobs:
           node-version-file: package.json
           cache: pnpm
           registry-url: 'https://npm.pkg.github.com'
+
+      - name: Set config
+        run: pnpm config set '//npm.pkg.github.com/:_authToken' "${NODE_AUTH_TOKEN}"
+        shell: bash
         
       - name: Install deps
         run: pnpm install --frozen-lockfile
