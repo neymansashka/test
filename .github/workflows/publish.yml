@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  packages: write
   
 env:
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
