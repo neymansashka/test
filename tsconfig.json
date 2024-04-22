@@ -1,3 +1,15 @@
 {
-  "extends": "@releaseband/typescript-config/tsconfig.json"
+  "include": ["src"],
+   "exclude": ["vite.config.ts"],
+  "compilerOptions": {
+	"lib": ["ESNext"],
+	"moduleResolution": "node",
+	"module": "ESNext",
+	"outDir": "dist",
+	"esModuleInterop": true,
+	"noUnusedLocals": true,
+	"strict": true,
+	"target": "ESNext"
+
+  }
 }

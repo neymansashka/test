@@ -4,7 +4,12 @@
   "description": "eslint config",
   "main": "index.js",  
   "scripts":{
-    "pub":"npm publish"
+    "build": "tsc && vite build",
+    "publishing":"pnpm run build && pnpm publish --no-git-checks"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^4.5.2"
   },
   "publishConfig": {
       "registry":"https://npm.pkg.github.com"
@@ -17,38 +22,11 @@
     "url": "https://github.com/neymansashka/test/issues"
   },
   "homepage": "https://github.com/neymansashka/test#readme",
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "@releaseband/typescript-config": "^0.1.1",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sonarjs": "^0.10.0",
-    "eslint-plugin-tsdoc": "^0.2.14"
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
   },
-  "peerDependencies": {
-    "eslint": "^7.32.0",
-    "@releaseband/typescript-config": "^0.1.1",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sonarjs": "^0.10.0",
-    "eslint-plugin-tsdoc": "^0.2.14"
-  },
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ],
+  "packageManager": "pnpm@7.32.1",
   "author": "",
   "license": "MIT"
 }
