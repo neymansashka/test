@@ -26,11 +26,12 @@ jobs:
           cache: pnpm
           registry-url: 'https://npm.pkg.github.com'
 
+      - name: Set config
+        run: pnpm config set '//npm.pkg.github.com/:_authToken' "${NPM_TOKEN}"
+        
       - name: Install deps
         run: pnpm install --frozen-lockfile
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+    
       - name: Publish
         run: pnpm run publishing
         
