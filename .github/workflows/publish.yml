@@ -1,9 +1,14 @@
 name: Publish
 
 on:
-  workflow_dispatch:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  
 env:
   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
