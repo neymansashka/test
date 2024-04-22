@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/neymansashka/test/compare/v0.2.0...v0.2.1) (2024-04-22)
+
+
+### Bug Fixes
+
+* test ([672b7b0](https://github.com/neymansashka/test/commit/672b7b0d25d29fa173ae873b58a9b2c4b4f69ebe))
+
 ## [0.2.0](https://github.com/neymansashka/test/compare/v0.1.26...v0.2.0) (2024-04-22)
 
 
