@@ -1,23 +1,20 @@
-name: Set up Node/npm/yarn
+name: Release
+
 on:
   push:
     branches:
       - main
+      
+permissions:
+  contents: write
+  pull-requests: write
+  
 jobs:
-  build:
+  release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout repo
+        uses: google-github-actions/release-please-action@v4
+        id: release
         with:
-          registry-url: https://npm.pkg.github.com
-          scope: '@neymansashka'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
-         npm install
-         npm publish
-      #- run: echo 
-      #- run: npm publish
-        #env:
-          #NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
